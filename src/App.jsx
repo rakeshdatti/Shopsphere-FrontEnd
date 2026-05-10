@@ -23,7 +23,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Login = lazy(() => import("./pages/Login"));
 const Checkout = lazy(() => import("./pages/Checkout"));
-const OrderSucess = lazy(() => import("./pages/orderSuccess"));
+const OrderSucess = lazy(() => import("./pages/OrderSuccess"));
 const Orders = lazy(() => import("./pages/Orders"));
 const Register = lazy(() => import("./pages/Register"));
 // const ProtectedRoute = lazy(() => import("./routes/ProtectedRoute"));
