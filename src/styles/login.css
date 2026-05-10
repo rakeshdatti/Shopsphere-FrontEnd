@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── PAGE ── */
+.flipkart-login-container {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 20% 10%, rgba(108,99,255,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 90%, rgba(67,233,123,0.08) 0%, transparent 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  padding: 40px 16px;
+}
+
+/* ── CARD ── */
+.flipkart-login-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  max-width: 860px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+}
+
+/* ── LEFT PANEL ── */
+.login-left {
+  background: linear-gradient(145deg, #1a1830 0%, #0f0f1a 100%);
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 20%, rgba(108,99,255,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(67,233,123,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.login-left-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-left-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.login-left h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: #f0f0ff;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-left h2 span {
+  background: linear-gradient(135deg, var(--accent), #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-left p {
+  font-size: 0.88rem;
+  color: rgba(240,240,255,0.55);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  max-width: 260px;
+}
+
+.login-left-perks {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.perk-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: rgba(240,240,255,0.6);
+}
+
+.perk-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(108,99,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ── RIGHT PANEL ── */
+.login-right {
+  background: var(--surface);
+  padding: 56px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.login-right-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.login-right-sub {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* ── FORM GROUP ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.form-group input {
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.form-group input::placeholder {
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+.form-group input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108,99,255,0.12);
+}
+
+/* ── PASSWORD ── */
+.password-group { position: relative; }
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 44px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.15s;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle:hover { color: var(--accent); }
+
+/* ── ERROR ── */
+.login-error {
+  background: rgba(255,101,132,0.1);
+  border: 1px solid rgba(255,101,132,0.3);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.82rem;
+  color: var(--accent2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── LOGIN BUTTON ── */
+.flipkart-login-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: white;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(108,99,255,0.35);
+  margin-top: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.flipkart-login-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.flipkart-login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(108,99,255,0.5);
+}
+
+.flipkart-login-btn:hover::before { opacity: 1; }
+
+.flipkart-login-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ── DIVIDER ── */
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── REGISTER LINK ── */
+.register-link-btn {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.register-link-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(108,99,255,0.06);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .flipkart-login-card {
+    grid-template-columns: 1fr;
+  }
+  .login-left {
+    padding: 36px 28px;
+  }
+  .login-left h2 { font-size: 1.8rem; }
+  .login-left-perks { display: none; }
+  .login-right { padding: 36px 28px; }
+}

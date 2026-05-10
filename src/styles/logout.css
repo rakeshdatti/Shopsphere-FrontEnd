@@ -1,0 +1,127 @@
+.logout-btn {
+  background: #e53935;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #c62828;
+}
+
+.nav-user {
+  color: white;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+/* AUTH SECTION */
+.nav-auth-section {
+  display: flex;
+  align-items: center;
+}
+
+/* USER MENU WRAPPER */
+.user-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+/* USER INFO */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+/* AVATAR */
+.avatar-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: white;
+  color: #2874f0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* EMAIL TEXT */
+.user-email {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu-custom {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  width: 180px;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+/* DROPDOWN ITEMS */
+.dropdown-menu-custom a,
+.dropdown-menu-custom button {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-menu-custom a:hover,
+.dropdown-menu-custom button:hover {
+  background: #f1f3f6;
+}
+
+/* SHOW DROPDOWN ON HOVER */
+.user-menu:hover .dropdown-menu-custom {
+  display: flex;
+}
+
+/* LOGIN BUTTON */
+.nav-login-btn {
+  background: white;
+  color: #2874f0;
+  padding: 6px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-cart {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* CART BADGE */
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: #ff6161;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 4px 7px;
+  border-radius: 50%;
+  min-width: 20px;
+  text-align: center;
+}

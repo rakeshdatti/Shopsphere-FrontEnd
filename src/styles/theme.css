@@ -1,0 +1,73 @@
+/* ── DARK THEME (default) ── */
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface2: #1c1c27;
+  --border: #2a2a3d;
+  --accent: #6c63ff;
+  --accent2: #ff6584;
+  --accent3: #43e97b;
+  --text: #f0f0ff;
+  --muted: #8888aa;
+  --radius: 16px;
+  --shadow: rgba(0,0,0,0.4);
+  --navbar-bg: rgba(10,10,15,0.85);
+}
+
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --bg: #f4f4fb;
+  --surface: #ffffff;
+  --surface2: #eeeef8;
+  --border: #dcdcf0;
+  --accent: #6c63ff;
+  --accent2: #ff6584;
+  --accent3: #1db96a;
+  --text: #0f0f1a;
+  --muted: #6b6b8a;
+  --radius: 16px;
+  --shadow: rgba(108,99,255,0.08);
+  --navbar-bg: rgba(244,244,251,0.85);
+}
+
+/* ── GLOBAL RESET ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+}
+
+[data-theme="light"] .nav-links a {
+  color: #4a4a6a;
+}
+
+[data-theme="light"] .nav-links a:hover {
+  color: var(--accent);
+  background: rgba(108,99,255,0.08);
+}
+
+[data-theme="light"] .nav-links a.active-link {
+  color: var(--accent);
+  background: rgba(108,99,255,0.1);
+  font-weight: 700;
+}
+
+[data-theme="light"] .flipkart-navbar {
+  background: rgba(244,244,251,0.92);
+  border-bottom-color: #dcdcf0;
+  box-shadow: 0 1px 12px rgba(108,99,255,0.07);
+}

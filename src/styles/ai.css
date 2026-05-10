@@ -1,0 +1,48 @@
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: #1e1e2f;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: transparent;
+}
+
+.user {
+  text-align: right;
+  margin: 6px 0;
+  color: white;
+}
+
+.bot {
+  text-align: left;
+  margin: 6px 0;
+  color: #a78bfa;
+}
+
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+}

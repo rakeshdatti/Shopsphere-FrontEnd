@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── ORDER SUCCESS PAGE ── */
+.order-success-container {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(67,233,123,0.1) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(108,99,255,0.08) 0%, transparent 60%);
+  font-family: 'Sora', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.success-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.success-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(67,233,123,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ── ICON ── */
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 800;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 32px rgba(67,233,123,0.35);
+  animation: successPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes successPop {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ── TITLE ── */
+.success-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+/* ── MESSAGE ── */
+.success-message {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.success-message strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── ORDER SUMMARY BOX ── */
+.order-summary-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-align: left;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-summary-box p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary-box p strong {
+  color: var(--text);
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* ── BUTTONS ── */
+.success-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.continue-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: white;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(108,99,255,0.3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.continue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(108,99,255,0.45);
+  color: white;
+}
+
+.invoice-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.invoice-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(108,99,255,0.06);
+}
+
+/* ── ORDERS PAGE ── */
+.orders-page {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70% 40% at 10% 0%, rgba(108,99,255,0.1) 0%, transparent 55%);
+  font-family: 'Sora', sans-serif;
+  color: var(--text);
+  padding: 48px 24px 80px;
+}
+
+.orders-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.orders-header {
+  margin-bottom: 32px;
+}
+
+.orders-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.orders-section-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.orders-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border), transparent);
+}
+
+/* ── ORDER CARD ── */
+.order-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 16px);
+  padding: 22px 24px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(108,99,255,0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.order-card:hover {
+  border-color: rgba(108,99,255,0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(108,99,255,0.12);
+}
+
+.order-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.order-id {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 260px;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(67,233,123,0.12);
+  color: var(--accent3);
+  border: 1px solid rgba(67,233,123,0.25);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.order-date {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.order-items-count {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.order-items-count strong {
+  color: var(--text);
+}
+
+.order-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.order-total-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.order-total {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── EMPTY ORDERS ── */
+.orders-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+}
+
+.orders-empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.orders-empty h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+
+@media print {
+  /* Force white background on everything */
+  html, body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide ALL other page elements */
+  body > *:not(#root) {
+    display: none !important;
+  }
+
+  /* Hide everything inside root except the success page */
+  #root > *:not(.order-success-container) {
+    display: none !important;
+  }
+
+  /* Navbar, header, footer — hide them */
+  nav, header, footer, .navbar, .sidebar {
+    display: none !important;
+  }
+
+  /* Show the invoice card */
+  .order-success-container {
+    display: flex !important;
+    visibility: visible !important;
+    background: white !important;
+    min-height: unset !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .success-card {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+
+  .success-icon {
+    background: none !important;
+    box-shadow: none !important;
+    border: 2px solid black !important;
+    color: black !important;
+  }
+
+  .success-title,
+  .success-message {
+    color: black !important;
+  }
+
+  .order-summary-box {
+    background: white !important;
+    border: 1px solid #999 !important;
+    color: black !important;
+  }
+
+  .order-summary-box p {
+    color: black !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .order-summary-box span,
+  .order-summary-box strong {
+    color: black !important;
+  }
+
+  /* Hide buttons in print */
+  .success-btns {
+    display: none !important;
+  }
+
+  /* Force color printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
