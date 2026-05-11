@@ -51,7 +51,7 @@ function Orders() {
             </p>
 
             <p className="order-items-count">
-              Items: <strong>{order.items.length}</strong>
+              Items: <strong>{order.OrderItems?.length || 0}</strong>
               &nbsp;·&nbsp;
               Payment: <strong>{order.paymentMethod?.toUpperCase()}</strong>
             </p>
